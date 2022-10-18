@@ -29,6 +29,8 @@ namespace Q5
 
 			//找出第一個星期日
 			DateTime result = specifiedYear;
+
+
 			switch (weekInt)
 			{
 				case 0:
@@ -57,16 +59,11 @@ namespace Q5
 
 
 			//迴圈+7天
-			//DateTime plus7Days = result;
 			while (DateTime.Compare(result, lastDay) < 0)
 			{
+				//先判斷是否符合
+				Console.WriteLine($"{result: yyyy-MM-dd}");
 				result = result.AddDays(7);
-
-				int year = result.Year;
-				if (year == yearInt) //為甚麼不寫這行if就會跳出隔年第一個星期日
-				{
-					Console.WriteLine($"{result: yyyy-MM-dd}");
-				}
 			}
 		}
 	}
