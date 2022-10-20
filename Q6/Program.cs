@@ -22,19 +22,22 @@ namespace Q6
 
 			DateTime today = Convert.ToDateTime(input);
 			int day = today.Day;
-
+			string meg=string.Empty;
 			if (day <= 10)
 			{
-				Console.WriteLine("本月上旬");
+				meg = "上旬";
+
 			}
 			else if (day <= 20)
 			{
-				Console.WriteLine("本月中旬");
+				meg = "中旬";
+
 			}
 			else
 			{
-				Console.WriteLine("本月下旬");
+				meg = "下旬";
 			}
+			Console.WriteLine($"今天是{meg}");
 		}
 	}
 }
