@@ -59,7 +59,7 @@ namespace Q5
 
 
 			//迴圈+7天
-			while (DateTime.Compare(result, lastDay) < 0)
+			while (result<lastDay)
 			{
 				//先判斷是否符合
 				Console.WriteLine($"{result: yyyy-MM-dd}");
